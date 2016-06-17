@@ -1,0 +1,22 @@
+//
+// Prefix header for all source files of the 'LSWeibo' target in the 'LSWeibo' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_6_0
+#warning "This project uses features only available in iOS SDK 6.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "WeiboSDK.h"
+
+//weibo OAuthu2.0
+#define kAppKey @"941221055"
+#define kAppSecret @"93cb0cd8af964a039405d6ad91ebce29"
+#define kAppRedirectURI @"https://api.weibo.com/oauth2/default.html"
+
+#endif
