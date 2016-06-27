@@ -4,8 +4,21 @@
 
 #import <Availability.h>
 
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "NSDate+Extension.h"
+#import "NSString+Extension.h"
+#import "NSString+Emoji.h"
+#import "UITextView+Extension.h"
+
 #ifndef __IPHONE_6_0
 #warning "This project uses features only available in iOS SDK 6.0 and later."
+#endif
+
+#ifdef DEBUG
+#define LSLog(...) NSLog(__VA_ARGS__)
+#else
+#define LSLog(...)
 #endif
 
 #ifdef __OBJC__
@@ -13,6 +26,11 @@
 #import <Foundation/Foundation.h>
 
 #import "WeiboSDK.h"
+
+// cell的边框宽度
+#define LSStatusCellBorderW 10
+#define LSStatusCellBorderH 5
+#define LSStatusMargin 10
 
 //weibo OAuthu2.0
 #define kAppKey @"941221055"
